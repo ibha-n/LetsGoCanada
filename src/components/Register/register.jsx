@@ -27,8 +27,11 @@ state = {
     profileComplete: ""
 }
 handleSubmit = () => {
-    let obj = this.state
-    axios.post('https://lgcgatewayapi-stage.azurewebsites.net/api/applicant/setNewApplicant',obj)
+    let obj = this.state;
+    const config = {
+        headers: { Authorization: `Bearer ${this.props.accessToken}` }
+    };
+    axios.post('https://lgcgatewayapi-stage.azurewebsites.net/api/applicant/setNewApplicant',obj,headers)
         .then((response) => {
     const regData = response.data;
     const status = response.status;
