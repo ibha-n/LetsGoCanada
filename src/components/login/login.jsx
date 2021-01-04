@@ -32,22 +32,12 @@ export default class Login extends React.Component {
                     this.setState({
                         accessToken: authData.data.token
                     })
-                    //console.log(this.state.accessToken)
-                    // <Register username={this.state.username}/>
+                    //Need to handle navigation
+                    // <Dashboard username={this.state.username}/>
                 }
             })
-        
-        // logic to make that request to end point
-        // sre those detials somewhere once i get a success message
- 
-
-
-
-        //access to username and password - YES
-        // verify username and password
-        // if success ? -> /dashboard
-        // if !success ? -> display error message
     }
+
 render(){
     return <div className="Main">
         <div className="header"> Login </div>
