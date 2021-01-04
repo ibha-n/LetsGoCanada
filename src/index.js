@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import Login from './components/login/login'
 import reportWebVitals from './reportWebVitals';
-import { Register } from './components/login/register';
+import { Register } from './components/Register/register';
 
 ReactDOM.render(
-    <Register />
+    <Login/>
   ,
   document.getElementById('root')
 );
